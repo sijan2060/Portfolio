@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sijan Maharjan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <nav class="navbar">
+        <div class="logo">S<span>M</span></div>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+                <i id="theme-icon" class="fa-solid fa-moon" aria-hidden="true"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main">
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Hi, I'm Sijan Maharjan</h1>
+                <p>CS Student | Full-Stack Developer</p>
+                <div class="hero-actions">
+                    <a href="contact.html" class="btn">Work With Me</a>
+                    <a href="projects.html" class="btn btn-secondary">See Projects</a>
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <h2>What I Do</h2>
+            <p class="section-subtitle">I build clean, responsive web apps—focused on real UX, solid back-end logic, and maintainable code.</p>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3>Full-Stack Development</h3>
+                    <p>From UI components to APIs and databases.</p>
+                    <div class="tag-row" aria-label="Tech stack">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Express</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <h3>Modern Frontend</h3>
+                    <p>Fast layouts, accessible UI, and thoughtful interactions.</p>
+                    <div class="tag-row" aria-label="Tech stack">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <h3>Practical Problem Solving</h3>
+                    <p>Building features that help users complete tasks smoothly.</p>
+                    <div class="project-links">
+                        <a class="btn project-btn" href="about.html">Learn More</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2>Featured Projects</h2>
+            <p class="section-subtitle">A quick preview of my projects.</p>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3>Food भोक Website</h3>
+                    <p>FOOD भोक Foundation is a community initiative dedicated to reducing hunger by providing food and support to needy people through collective effort.</p>
+                    <div class="tag-row" aria-label="Tech stack">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a class="btn project-btn" href="projects.html">View Project</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <h3>Hamro Bikes</h3>
+                    <p>Hamro Bike is a user-friendly platform that makes renting and exploring bikes easy, affordable, and convenient for everyone.</p>
+                    <div class="tag-row" aria-label="Tech stack">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">React.js</span>
+                        <span class="tag">Node.js</span>
+                    </div>
+                    <div class="project-links">
+                        <a class="btn project-btn" href="projects.html">View Project</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2>Ready to build?</h2>
+            <p class="section-subtitle">If you want a responsive, professional web solution—send me a message.</p>
+            <div class="hero-actions">
+                <a href="contact.html" class="btn">Send Message</a>
+                <a href="projects.html" class="btn btn-secondary">See Work</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner container">
+            <div class="social-links" aria-label="Social links">
+                <a class="social-link" href="https://github.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a class="social-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a class="social-link" href="mailto:you@example.com"><i class="fa-solid fa-envelope"></i> Email</a>
+            </div>
+            <p class="footer-note">© <span id="year"></span> Sijan Maharjan</p>
+        </div>
+    </footer>
+
+    <a href="#main" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

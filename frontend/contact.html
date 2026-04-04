@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Sijan Maharjan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+     <link rel="shortcut icon" href="/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <nav class="navbar">
+        <div class="logo">S<span>M</span></div>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+                <i id="theme-icon" class="fa-solid fa-moon" aria-hidden="true"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main">
+        <section id="contact" class="container">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Your Name" required autocomplete="name" aria-label="Your Name">
+                <input type="email" id="email" placeholder="Your Email" required autocomplete="email" aria-label="Your Email">
+                <input type="text" id="subject" placeholder="Subject" required aria-label="Subject">
+                <textarea id="message" placeholder="Your Message" rows="5" required aria-label="Your Message"></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            <p id="response-msg"></p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner container">
+            <div class="social-links" aria-label="Social links">
+                <a class="social-link" href="https://github.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a class="social-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a class="social-link" href="mailto:you@example.com"><i class="fa-solid fa-envelope"></i> Email</a>
+            </div>
+            <p class="footer-note">© <span id="year"></span> Sijan Maharjan</p>
+        </div>
+    </footer>
+
+    <a href="#main" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
