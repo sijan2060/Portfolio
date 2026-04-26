@@ -195,3 +195,74 @@ if (mobileMenuBtn && navLinksContainer) {
         });
     });
 }
+
+// --- ADVANCED UI/UX LOGIC ---
+
+// 1. Scroll Reveal Animations
+const revealElements = document.querySelectorAll('section h2, .section-subtitle, .project-card, .skill-card, .timeline-content');
+revealElements.forEach((el, index) => {
+    el.classList.add('reveal');
+    if (el.classList.contains('project-card') || el.classList.contains('skill-card')) {
+        const i = index % 3;
+        el.style.transitionDelay = `${i * 0.1}s`;
+    }
+});
+
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+revealElements.forEach(el => revealObserver.observe(el));
+
+// 2. 3D Tilt Effect for Cards
+const tiltElements = document.querySelectorAll('.project-card, .skill-card, .timeline-content');
+tiltElements.forEach(el => {
+    el.addEventListener('mousemove', (e) => {
+        if (!window.matchMedia("(pointer: fine)").matches) return;
+        const rect = el.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const rotateX = ((y - centerY) / centerY) * -10; 
+        const rotateY = ((x - centerX) / centerX) * 10;
+        
+        el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+        el.style.transition = 'none';
+        el.style.zIndex = '10';
+    });
+    
+    el.addEventListener('mouseleave', () => {
+        if (!window.matchMedia("(pointer: fine)").matches) return;
+        el.style.transform = '';
+        el.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+        el.style.zIndex = '1';
+    });
+});
+
+// 3. Magnetic Buttons
+const magneticButtons = document.querySelectorAll('.btn, .social-link, .theme-toggle');
+magneticButtons.forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+        if (!window.matchMedia("(pointer: fine)").matches) return;
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        
+        btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+        btn.style.transition = 'none';
+    });
+    
+    btn.addEventListener('mouseleave', () => {
+        if (!window.matchMedia("(pointer: fine)").matches) return;
+        btn.style.transform = '';
+        btn.style.transition = 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+    });
+});
