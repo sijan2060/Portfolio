@@ -26,9 +26,8 @@ if (themeToggle && themeIcon) {
         initialTheme = null;
     }
 
-    // Default to system preference (light = white, dark = black), unless user picked otherwise.
-    const systemTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    setTheme(initialTheme === 'light' || initialTheme === 'dark' ? initialTheme : 'light');
+    // Default to dark theme if no preference is saved.
+    setTheme(initialTheme === 'light' || initialTheme === 'dark' ? initialTheme : 'dark');
 
     themeToggle.addEventListener('click', () => {
         const current = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
@@ -266,3 +265,18 @@ magneticButtons.forEach(btn => {
         btn.style.transition = 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
     });
 });
+
+// 4. Dynamic Hero Subtitle
+const subtitleEl = document.getElementById('hero-subtitle');
+if (subtitleEl) {
+    const titles = ["BCS Student", "Full-Stack Developer"];
+    let index = 0;
+    setInterval(() => {
+        index = (index + 1) % titles.length;
+        subtitleEl.style.opacity = 0;
+        setTimeout(() => {
+            subtitleEl.textContent = titles[index];
+            subtitleEl.style.opacity = 1;
+        }, 500);
+    }, 7000);
+}

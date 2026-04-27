@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,20 +9,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" type="image/png" href="favicon-32x32.png">
 </head>
+
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
     <nav class="navbar">
         <a href="index.html" class="logo">S<span>M</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
         <div class="nav-right">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+            <a href="https://github.com/sijan2060" target="_blank" rel="noopener noreferrer" class="nav-github">
+                <i class="fa-brands fa-github"></i> <span>GitHub</span>
+            </a>
             <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
                 <i id="theme-icon" class="fa-solid fa-moon" aria-hidden="true"></i>
             </button>
@@ -65,41 +70,17 @@
             </div>
         </section>
 
-        <section id="education" class="container">
-            <h2>Education</h2>
-            <p class="section-subtitle">We update these details anytime.</p>
-            <div class="timeline" role="list">
-                <div class="timeline-item" role="listitem">
-                    <div class="timeline-marker" aria-hidden="true"></div>
-                    <br>
-                    <div class="timeline-content">
-                        <h3>+2</h3>
-                        <p class="timeline-meta">2020 - 2022 • Kathamndu Bernhardt College, Kathmandu, Nepal</p>
-                        <ul>
-                            <li>Science Stream</li>
-                        </ul>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Bachelor's Degree</h3>
-                        <p class="timeline-meta">2023 - Present • IIMS College, Kathmandu, Nepal | Taylor's University, Subang Jaya, Malaysia</p>
-                        <ul>
-                            <li>Relevant coursework: Web Development, Database Management Systems, Data Visualization and Analysis </li>
-                            <li>Projects: Two-Vehicle Rental Management System and Food Management Website </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer class="footer">
         <div class="footer-inner container">
             <div class="social-links" aria-label="Social links">
-                <a class="social-link" href="https://github.com/sijan2060" target="_blank" rel="noopener noreferrer"><i
-                        class="fa-brands fa-github"></i> GitHub</a>
-                <a class="social-link" href="https://www.linkedin.com/in/sijan-maharjan-4a3408282/" target="_blank" rel="noopener noreferrer"><i
-                        class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                <a class="social-link" href="https://www.instagram.com/fdr.season/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a class="social-link" href="https://www.facebook.com/sijanmaharjan08/" target="_blank"
+                    rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                <a class="social-link" href="https://www.linkedin.com/in/sijan-maharjan-4a3408282/" target="_blank"
+                    rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a class="social-link" href="https://www.instagram.com/fdr.season/" target="_blank"
+                    rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>
             </div>
             <p class="footer-note">© <span id="year"></span> Sijan Maharjan</p>
         </div>
@@ -108,4 +89,5 @@
     <a href="#main" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
     <script src="js/scripts.js"></script>
 </body>
+
 </html>

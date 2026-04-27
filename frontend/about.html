@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,20 +9,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" type="image/png" href="favicon-32x32.png">
 </head>
+
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
     <nav class="navbar">
         <a href="index.html" class="logo">S<span>M</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
         <div class="nav-right">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+            <a href="https://github.com/sijan2060" target="_blank" rel="noopener noreferrer" class="nav-github">
+                <i class="fa-brands fa-github"></i> <span>GitHub</span>
+            </a>
             <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
                 <i id="theme-icon" class="fa-solid fa-moon" aria-hidden="true"></i>
             </button>
@@ -36,9 +41,12 @@
             <h2>About Me</h2>
             <div class="about-intro">
                 <p>
-                    I’m a passionate university student focused on full-stack development. I enjoy building dynamic web applications with clean UI, reliable back-end logic, and databases that make features feel effortless for users.
+                    I’m a passionate university student focused on full-stack development. I enjoy building dynamic web
+                    applications with clean UI, reliable back-end logic, and databases that make features feel
+                    effortless for users.
                 </p>
-                <p class="section-subtitle">My goal is simple: To create high-quality products that are helpful, beautiful, and function perfectly..</p>
+                <p class="section-subtitle">My goal is simple: To create high-quality products that are helpful,
+                    beautiful, and function perfectly..</p>
             </div>
 
             <div class="projects-grid">
@@ -98,25 +106,43 @@
         <section class="container">
             <h2>Education</h2>
             <p class="section-subtitle">We update these details anytime.</p>
-            <div class="timeline" role="list">
-                <div class="timeline-item" role="listitem">
-                    <div class="timeline-marker" aria-hidden="true"></div>
-                    <br>
-                    <div class="timeline-content">
-                        <h3>+2</h3>
-                        <p class="timeline-meta">2020 - 2022 • Kathamndu Bernhardt College, Kathmandu, Nepal</p>
-                        <ul>
-                            <li>Science Stream</li>
-                        </ul>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-logos">
+                        <img src="img/rarahil-logo.jpg" alt="Rarahil Logo" class="edu-logo">
                     </div>
-                    <div class="timeline-content">
-                        <h3>Bachelor's Degree</h3>
-                        <p class="timeline-meta">2023 - Present • IIMS College, Kathmandu, Nepal | Taylor's University, Subang Jaya, Malaysia</p>
-                        <ul>
-                            <li>Relevant coursework: Web Development, Database Management Systems, Data Visualization and Analysis </li>
-                            <li>Projects: Two-Vehicle Rental Management System and Food Management Website </li>
-                        </ul>
+                    <h3>School</h3>
+                    <p class="timeline-meta">Childhood - 2019</p>
+                    <p>Rarahil Memorial School, Kirtipur, Nepal</p>
+                    <ul>
+                        <li>Secondary Education</li>
+                    </ul>
+                </div>
+
+                <div class="education-card">
+                    <div class="education-logos">
+                        <img src="img/kbc.jpeg" alt="KBC Logo" class="edu-logo">
                     </div>
+                    <h3>+2 NEB</h3>
+                    <p class="timeline-meta">2020 - 2022</p>
+                    <p>Kathamndu Bernhardt College, Kathmandu, Nepal</p>
+                    <ul>
+                        <li>Science Stream</li>
+                    </ul>
+                </div>
+
+                <div class="education-card span-full">
+                    <div class="education-logos">
+                        <img src="img/iims.jpg" alt="IIMS Logo" class="edu-logo">
+                        <img src="img/Logo-Taylors-University.png" alt="Taylor's Logo" class="edu-logo">
+                    </div>
+                    <h3>Bachelor's Degree</h3>
+                    <p class="timeline-meta">2023 - Present</p>
+                    <p>IIMS College, Kathmandu, Nepal | Taylor's University, Subang Jaya, Malaysia</p>
+                    <ul>
+                        <li>Relevant coursework: Web Development, Database Management Systems, Data Visualization and Analysis </li>
+                        <li>Projects: Two-Vehicle Rental Management System and Food Management Website </li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -124,9 +150,8 @@
         <section class="container">
             <h2>Let’s Talk</h2>
             <p class="section-subtitle">Interested in collaborating? Send a message and I’ll get back to you.</p>
-            <div class="hero-actions">
+            <div class="cta-actions">
                 <a href="contact.html" class="btn">Message Me</a>
-                <a href="projects.html" class="btn btn-secondary">Browse Projects</a>
             </div>
         </section>
     </main>
@@ -134,11 +159,12 @@
     <footer class="footer">
         <div class="footer-inner container">
             <div class="social-links" aria-label="Social links">
-                <a class="social-link" href="https://github.com/sijan2060" target="_blank" rel="noopener noreferrer"><i
-                        class="fa-brands fa-github"></i> GitHub</a>
-                <a class="social-link" href="https://www.linkedin.com/in/sijan-maharjan-4a3408282/" target="_blank" rel="noopener noreferrer"><i
-                        class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                <a class="social-link" href="https://www.instagram.com/fdr.season/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a class="social-link" href="https://www.facebook.com/sijanmaharjan08/" target="_blank"
+                    rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                <a class="social-link" href="https://www.linkedin.com/in/sijan-maharjan-4a3408282/" target="_blank"
+                    rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a class="social-link" href="https://www.instagram.com/fdr.season/" target="_blank"
+                    rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>
             </div>
             <p class="footer-note">© <span id="year"></span> Sijan Maharjan</p>
         </div>
@@ -147,4 +173,5 @@
     <a href="#main" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
     <script src="js/scripts.js"></script>
 </body>
+
 </html>
